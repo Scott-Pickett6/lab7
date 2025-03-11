@@ -22,60 +22,9 @@ If what is being submitted is an individual Lab or Assignment, you may simply in
 * [React](https://react.dev/) - The web framework used
 * [Bootstrap](https://getbootstrap.com/) - css framework
 
-
-## Sources Used
-
-If in completing your lab / assignment / project you used any interpretation of someone else's code, then provide a list of where the code was implemented, how it was implemented, why it was implemented, and how it was modified. See the sections below for more details.
-
-
-### File Name
-
-*Lines ## - ##*
-
-```
-Copy and paste your code on lines mentioned 
-
-```
-
-The code above was created by adapting the code in [NAME](link) as shown below: 
-
-```
-Copy and paste the snippet of code you are referencing
-
-```
-
-- <!---How---> The code in [NAME](link) was implemented by...
-- <!---Why---> [NAME](link)'s Code was used because...
-- <!---How---> [NAME](link)'s Code was modified by...
-
-*Repeat as needed*
-
-
-### File Name
-
-*Lines ## - ##*
-
-```
-Copy and paste your code on lines mentioned 
-
-```
-
-The code above was created by adapting the code in [NAME](link) as shown below: 
-
-```
-Copy and paste the snippet of code you are referencing
-
-```
-
-- <!---How---> The code in [NAME](link) was implemented by...
-- <!---Why---> [NAME](link)'s Code was used because...
-- <!---How---> [NAME](link)'s Code was modified by...
-
-*Repeat as needed*
-
 ## Unit Tests
 run npm test to run my tests. Since my page is just text at this point I simply tested if my components rendered properly. 
-I plan to have more complex tests in future labs of this project
+I plan to have more complex tests in future labs of this project.
 
 ## Acknowledgments
 
