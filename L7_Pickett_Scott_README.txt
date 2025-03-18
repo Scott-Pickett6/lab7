@@ -1,4 +1,4 @@
-# Lab 6
+# Lab 7
 
 **[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
 
@@ -33,6 +33,3 @@ I plan to have more complex tests in future labs of this project.
 [2]“Linkedin Vector Hd PNG Images, White Linkedin Icon Png, Linkedin Icons, White Icons, Linkedin Logo PNG Image For Free Download,” Pngtree, 2018. https://pngtree.com/freepng/white-linkedin-icon-png_3562068.html (accessed Mar. 11, 2025).
 
 [3]Bootstrap, “Bootstrap,” Getbootstrap.com, 2022. https://getbootstrap.com/
-‌
-‌
-‌
