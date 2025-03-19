@@ -1,5 +1,55 @@
+import { useEffect, useState } from "react";
 
 function About() {
+    const programmingLanguages = ["Java", "C", "HTML", "CSS", "JavaScript", "Python", "C#", "PHP"];
+    const tools = ["React", "Unity", "Django", "ASP.NET MVC", "Bootstrap"];
+
+    const dropdownValues = ["All", "Frontend", "Backend", "Other"];
+
+    const [programmingLanguagesShown, setProgrammingLanguagesShown] = useState(programmingLanguages);
+    const [toolsShown, setToolsShown] = useState(tools);
+
+    const [searchInput, setSearchInput] = useState("");
+    const [dropdown, setDropdown] = useState("All");
+
+    useEffect(() => {
+        filter();
+    }, [searchInput, dropdown]);
+
+    function filter() {
+        const search = searchInput.toLowerCase().trim();
+
+        let filteredLanguages = programmingLanguages;
+        let filteredTools = tools;
+
+        if (dropdown === "Frontend") {
+            filteredLanguages = programmingLanguages.filter((language) =>
+                ["HTML", "CSS", "JavaScript"].includes(language)
+            );
+            filteredTools = tools.filter((tool) => ["React", "Bootstrap"].includes(tool));
+        } else if (dropdown === "Backend") {
+            filteredLanguages = programmingLanguages.filter((language) =>
+                ["Java", "Python", "C#", "PHP"].includes(language)
+            );
+            filteredTools = tools.filter((tool) => ["Django", "ASP.NET MVC"].includes(tool));
+        } else if (dropdown === "Other") {
+            filteredLanguages = programmingLanguages.filter((language) => ["C"].includes(language));
+            filteredTools = tools.filter((tool) => ["Unity"].includes(tool));
+        }
+
+        if (search !== "") {
+            filteredLanguages = filteredLanguages.filter((language) =>
+                language.toLowerCase().includes(search)
+            );
+            filteredTools = filteredTools.filter((tool) =>
+                tool.toLowerCase().includes(search)
+            );
+        }
+
+        setProgrammingLanguagesShown(filteredLanguages);
+        setToolsShown(filteredTools);
+    }
+
     return (
         <main className="container d-flex flex-column">
             <h2 className="align-self-center">About</h2>
@@ -25,25 +75,31 @@ function About() {
                 </section>
                 <section>
                     <h4>Technical Skills</h4>
+                    <div className="form-group d-flex gap-4">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Search Skills"
+                            onChange={(e) => setSearchInput(e.target.value)}
+                        />
+                        <select className="form-control" onChange={(e) => setDropdown(e.target.value)}>
+                            {dropdownValues.map((value, index) => (
+                                <option key={index}>{value}</option>
+                            ))}
+                        </select>
+                    </div>
                     <div className="ms-4">
                         <h6>Programming Languages</h6>
                         <ul>
-                            <li>Java</li>
-                            <li>C</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Python</li>
-                            <li>C#</li>
-                            <li>PHP</li>
+                            {programmingLanguagesShown.map((language, index) => (
+                                <li key={index}>{language}</li>
+                            ))}
                         </ul>
                         <h6>Tools</h6>
                         <ul>
-                            <li>React</li>
-                            <li>Unity</li>
-                            <li>Django</li>
-                            <li>ASP.NET MVC</li>
-                            <li>Bootstrap</li>
+                            {toolsShown.map((tool, index) => (
+                                <li key={index}>{tool}</li>
+                            ))}
                         </ul>
                     </div>
                 </section>

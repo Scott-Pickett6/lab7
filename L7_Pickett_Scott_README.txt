@@ -2,10 +2,10 @@
 
 **[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
 
-* *Date Created*: 10 MAR 2025
-* *Last Modification Date*: 11 MAR 2025
-* *Netlify Link: https://main--thunderous-valkyrie-a2088e.netlify.app/
-* *Lab URL*: https://git.cs.dal.ca/pickett/csci3172/-/tree/main/labs/lab6
+* *Date Created*: 19 MAR 2025
+* *Last Modification Date*:  MAR 2025
+* *Netlify Link: 
+* *Lab URL*: https://git.cs.dal.ca/pickett/csci3172/-/tree/main/labs/lab7
 
 
 ## Authors
