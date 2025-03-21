@@ -6,9 +6,7 @@ function Home() {
 
     useEffect(() => {
         const fetchWeather = async () => {
-            const apiKey = "284f88f528d1bd070135c4a0ed70dacd";
-            const city = "Halifax";
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+            const url = 'https://api.openweathermap.org/data/2.5/weather?q=Halifax&units=metric&appid=284f88f528d1bd070135c4a0ed70daca';
 
             try {
                 const response = await fetch(url);
