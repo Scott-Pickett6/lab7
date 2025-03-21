@@ -38,8 +38,7 @@ router.get("/projects", (req, res) => {
         }
       ]
 
-    const projects = JSON.parse(data);
-    res.json(projects);
+    res.json(data);
 });
 
 app.use("/.netlify/functions/api", router);
