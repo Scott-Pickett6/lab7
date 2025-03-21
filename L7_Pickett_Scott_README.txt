@@ -3,8 +3,8 @@
 **[Optional]** If what is being submitted is an individual Lab or Assignment. Otherwise, include a brief one paragraph description about the project.
 
 * *Date Created*: 19 MAR 2025
-* *Last Modification Date*:  MAR 2025
-* *Netlify Link: 
+* *Last Modification Date*: 20 MAR 2025
+* *Netlify Link: https://regal-seahorse-de4212.netlify.app/
 * *Lab URL*: https://git.cs.dal.ca/pickett/csci3172/-/tree/main/labs/lab7
 
 
@@ -21,6 +21,8 @@ If what is being submitted is an individual Lab or Assignment, you may simply in
 
 * [React](https://react.dev/) - The web framework used
 * [Bootstrap](https://getbootstrap.com/) - css framework
+* [Netlify](https://www.netlify.com/) - backend used
+* [Express](https://expressjs.com/) - backend used
 
 ## Unit Tests
 run npm test to run my tests. Since my page is just text at this point I simply tested if my components rendered properly. 

@@ -2,21 +2,28 @@ const express = require("express");
 const serverless = require("serverless-http");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const axios = require("axios");
-const fetch = require("node-fetch");
+const fs = require("fs");
+const path = require("path");
 
 dotenv.config();
 const app = express();
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    res.json({
-        message: "test"
+app.use(cors());
+
+// Route to get all projects
+router.get("/projects", (req, res) => {
+    const filePath = path.join(__dirname, "projects.json");
+    fs.readFile(filePath, "utf8", (err, data) => {
+        if (err) {
+            console.log("Error json:", err);
+            return res.status(500).json({ error: "Failed to load projects" });
+        }
+        const projects = JSON.parse(data);
+        res.json(projects);
     });
 });
 
 app.use("/.netlify/functions/api", router);
 module.exports = app;
-
-
 module.exports.handler = serverless(app);
