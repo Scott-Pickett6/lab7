@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 function About() {
-    const programmingLanguages = ["Java", "C", "HTML", "CSS", "JavaScript", "Python", "C#", "PHP"];
-    const tools = ["React", "Unity", "Django", "ASP.NET MVC", "Bootstrap"];
+    const programmingLanguages = useMemo(() => ["Java", "C", "HTML", "CSS", "JavaScript", "Python", "C#", "PHP"], []);
+    const tools = useMemo(() => ["React", "Unity", "Django", "ASP.NET MVC", "Bootstrap"], []);
 
     const dropdownValues = ["All", "Frontend", "Backend", "Other"];
 
@@ -13,10 +13,6 @@ function About() {
     const [dropdown, setDropdown] = useState("All");
 
     useEffect(() => {
-        filter();
-    }, [searchInput, dropdown]);
-
-    function filter() {
         const search = searchInput.toLowerCase().trim();
 
         let filteredLanguages = programmingLanguages;
@@ -48,7 +44,7 @@ function About() {
 
         setProgrammingLanguagesShown(filteredLanguages);
         setToolsShown(filteredTools);
-    }
+    }, [searchInput, dropdown, programmingLanguages, tools]);
 
     return (
         <main className="container d-flex flex-column">
