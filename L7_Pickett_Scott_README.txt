@@ -7,6 +7,8 @@
 * *Netlify Link: https://regal-seahorse-de4212.netlify.app/
 * *Lab URL*: https://git.cs.dal.ca/pickett/csci3172/-/tree/main/labs/lab7
 
+* *backend URL: https://main--lab7backend.netlify.app/.netlify/functions/api/projects
+
 
 ## Authors
 
