@@ -16,15 +16,30 @@ app.use(cors());
 
 // Route to get all projects
 router.get("/projects", (req, res) => {
-    const filePath = path.join("projects.json");
-    fs.readFile(filePath, "utf8", (err, data) => {
-        if (err) {
-            console.log("Error json:", err);
-            return res.status(500).json({ error: "Failed to load projects" });
+
+    data = [
+        {
+          "name": "Maritime Travel Client Portal Website",
+          "author": "Scott Pickett",
+          "languages": ["ASP.NET MVC", "C#", "HTML", "CSS", "JavaScript", "Bootstrap"],
+          "description": "Worked on a website made with ASP.NET MVC that allowed business clients to view invoices and other important information."
+        },
+        {
+          "name": "CAE Media Suite",
+          "author": "Scott Pickett",
+          "languages": ["React", "HTML", "CSS", "JavaScript", "Django", "Python"],
+          "description": "Worked on an LMS system designed for CAE subject matter experts to create and manage training courses."
+        },
+        {
+          "name": "CAE Model Rendering Tool",
+          "author": "Scott Pickett",
+          "languages": ["Unity", "C#"],
+          "description": "Worked on a Unity tool that allowed users to view and manipulate 3D models of aircraft or other custom models for static images."
         }
-        const projects = JSON.parse(data);
-        res.json(projects);
-    });
+      ]
+
+    const projects = JSON.parse(data);
+    res.json(projects);
 });
 
 app.use("/.netlify/functions/api", router);
