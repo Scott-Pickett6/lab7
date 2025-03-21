@@ -24,10 +24,6 @@ If what is being submitted is an individual Lab or Assignment, you may simply in
 * [Netlify](https://www.netlify.com/) - backend used
 * [Express](https://expressjs.com/) - backend used
 
-## Unit Tests
-run npm test to run my tests. Since my page is just text at this point I simply tested if my components rendered properly. 
-I plan to have more complex tests in future labs of this project.
-
 ## Acknowledgments
 
 [1]https://www.facebook.com/flaticon, “Linkedin Icon - 3536569,” Flaticon, Sep. 23, 2020. https://www.flaticon.com/free-icon/linkedin_3536569?term=linkedin&page=1&position=2&origin=tag&related_id=3536569 (accessed Mar. 11, 2025).
