@@ -13,7 +13,7 @@ app.use(cors());
 
 // Route to get all projects
 router.get("/projects", (req, res) => {
-    const filePath = path.join(__dirname, "projects.json");
+    const filePath = path.join("lab7backend/projects.json");
     console.log(filePath);
     fs.readFile(filePath, "utf8", (err, data) => {
         if (err) {
