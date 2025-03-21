@@ -13,8 +13,8 @@ app.use(cors());
 
 // Route to get all projects
 router.get("/projects", (req, res) => {
+    console.log(__dirname);
     const filePath = path.join("/var/task/backend/projects.json");
-    console.log(filePath);
     fs.readFile(filePath, "utf8", (err, data) => {
         if (err) {
             console.log("Error json:", err);
